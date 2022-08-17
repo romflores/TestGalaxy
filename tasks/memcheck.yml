@@ -1,0 +1,10 @@
+---
+# tasks file for roles/health_check
+#
+
+- name: Memory check
+  shell: "free"
+  register: Output
+
+- debug:
+    msg: "{{ Output.stdout }}"

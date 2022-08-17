@@ -1,0 +1,7 @@
+---
+# tasks file for roles/health_check
+#
+- import_tasks: diskcheck.yml
+- import_tasks: memcheck.yml
+  notify:
+    - health_check Finished

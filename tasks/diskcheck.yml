@@ -1,0 +1,10 @@
+---
+# tasks file for roles/health_check
+#
+
+- name: Disk space check
+  shell: "df -h"
+  register: Output
+
+- debug:
+    msg: "{{ Output.stdout }}"

@@ -1,0 +1,10 @@
+---
+
+- hosts: myservers
+  gather_facts: no
+  vars:
+    mymsg: This is a journey into the sound
+
+  roles:
+    - health_check
+

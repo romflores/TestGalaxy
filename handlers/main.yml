@@ -1,0 +1,16 @@
+---
+# handlers file for roles/health_check
+#
+- name: health_check Finished
+  shell: "echo health check completed."
+  register: Output
+
+- debug:
+    msg: "{{ Output.stdout }}"
+
+- name: health_check Failed
+  shell: "echo health check failed."
+  register: Output
+
+- debug:
+    msg: "{{ Output.stdout }}"
